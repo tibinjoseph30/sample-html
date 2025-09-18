@@ -1,0 +1,91 @@
+:root {
+    --primary-color: #1b48bb;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: arial;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    color: #212121;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 15px;
+}
+.main {
+    margin-top: 50px;
+    display: grid;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.main .content {
+    display: grid;
+    justify-content: start;
+    row-gap: 10px;
+}
+
+.main .services {
+    display: grid;
+    gap: 20px;    
+}
+
+.main .services .service-item {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    min-height: 250px;
+    row-gap: 15px;
+    box-shadow: 0px 4px 3px 0 rgb(0 0 0 / 10%);
+}
+.main .services .service-item h5 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+.main .services .service-item p {
+    color: #666;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    margin-top: 25px;
+}
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+.text-muted {
+    color: #686868;
+}
+
+@media screen and (min-width: 640px) {
+    .main .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container {
+        padding: 0 100px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .main {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
+    }
+}
